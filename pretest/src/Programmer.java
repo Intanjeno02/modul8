@@ -6,6 +6,7 @@ public class Programmer extends Karyawan {
         this.gajiPokok = gajiPokok;
     }
 
+    
     public double hitungGaji() {
         return gajiPokok;
     }
