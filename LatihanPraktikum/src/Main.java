@@ -2,18 +2,18 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args){
-        KartuKredit kartuy = new KartuKredit("senjana", 2000000, 123456789); //membuat objek KartuKredit
-        EWallet Walet = new EWallet("tata", 300000, "GoPay", "08123456789"); //membuat objek EWallet
+        KartuKredit kartuy = new KartuKredit("senjana", 2000000, 123456789); 
+        EWallet Walet = new EWallet("tata", 300000, "GoPay", "08123456789"); 
 
-        ArrayList<Pembayaran> daftarPembayaran = new ArrayList<>(); //membuat ArrayList untuk menyimpan objek Pembayaran
-        daftarPembayaran.add(kartuy); //menambahkan objek KartuKredit
-        daftarPembayaran.add(Walet); //menambahkan objek EWallet
+        ArrayList<Pembayaran> daftarPembayaran = new ArrayList<>(); 
+        daftarPembayaran.add(kartuy); 
+        daftarPembayaran.add(Walet); 
 
-        for (Pembayaran pembayaran : daftarPembayaran) { //iterasi melalui daftarPembayaran
-            pembayaran.tampilkanDetail(); //memanggil metode tampilkanDetail untuk setiap objek Pembayaran
-            if (pembayaran instanceof Keamanan) { //memeriksa apakah objek Pembayaran juga mengimplementasikan interface Keamanan
-                pembayaran.prosesPembayaran(); //memanggil metode prosesPembayaran untuk memproses pembayaran
-                ((Keamanan) pembayaran).autentikasi(); //memanggil metode autentikasi jika objek tersebut mengimplementasikan Keamanan
+        for (Pembayaran pembayaran : daftarPembayaran) { 
+            pembayaran.tampilkanDetail(); 
+            if (pembayaran instanceof Keamanan) { 
+                pembayaran.prosesPembayaran(); 
+                ((Keamanan) pembayaran).autentikasi(); 
             }
         }
     }

@@ -1,20 +1,20 @@
 public class EWallet extends Pembayaran implements Keamanan { //kelas EWallet yang mengimplementasikan interface Pembayaran dan Keamanan
-    private String nomorHP; //atribut tambahan untuk EWallet
+    private String nomorHP;
 
     public EWallet(String namaPembayar, double nominal, String namaEWallet, String nomorHP) {
-        super(namaPembayar, nominal); //memanggil konstruktor dari kelas Pembayaran
+        super(namaPembayar, nominal); 
         this.nomorHP = nomorHP;
     }
 
     @Override
-    public void prosesPembayaran() { //implementasi metode prosesPembayaran dari interface Pembayaran
-        System.out.println("Total tagihan: " + nominal); // menampilkan total tagihan tapa biaya admin
+    public void prosesPembayaran() { 
+        System.out.println("Total tagihan: " + nominal); 
     }
 
     @Override
-    public boolean autentikasi() { //implementasi metode autentikasi dari interface Keamanan
-        System.out.println("Autentikasi berhasil " ); //pesan bahwa autentikasi berhasil
-        return true; //autentikasi berhasil
+    public boolean autentikasi() { 
+        System.out.println("Autentikasi berhasil " );
+        return true; 
     }
     
 }

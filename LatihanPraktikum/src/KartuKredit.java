@@ -1,22 +1,22 @@
-public class KartuKredit extends Pembayaran implements Keamanan { //kelas KartuKredit yang mengimplementasikan interface Pembayaran dan Keamanan
-    private int nomorKartu; //atribut tambahan untuk KartuKredit
+public class KartuKredit extends Pembayaran implements Keamanan { 
+    private int nomorKartu; 
 
     public KartuKredit(String namaPembayar, double nominal, int nomorKartu) {
-        super(namaPembayar, nominal); //memanggil konstruktor dari kelas Pembayaran
+        super(namaPembayar, nominal); 
         this.nomorKartu = nomorKartu;
     }
 
     @Override
-    public void prosesPembayaran() { //implementasi metode prosesPembayaran dari interface Pembayaran
+    public void prosesPembayaran() { 
         double admin = nominal * 0.02;
-        double total = nominal + admin; //perhitungan admin sebesar 2% dari nominal
+        double total = nominal + admin; 
         System.out.println("Biaya admin: " + admin);
         System.out.println("Total pembayaran dengan Kartu Kredit: " + (nominal + admin));
     }
 
     @Override
-    public boolean autentikasi() { //implementasi metode autentikasi dari interface Keamanan
+    public boolean autentikasi() { 
         System.out.println("Autentikasi PIN berhasil");
-        return true; //autentikasi berhasil
+        return true; 
     }
 }
